@@ -1,0 +1,67 @@
+.navbar {
+    background-image: url("Pic/PowerHeaderFooter.jpeg");
+}
+
+a.nav-link {
+    display: inline-block;
+    color: rgb(255, 255, 255, 0.80);
+}
+
+a.nav-link:hover {
+    color: white;
+}
+
+a.nav-link.active {
+    color: white;
+}
+
+.jumbotron {
+    background-image: url("Pic/PowerJumbotron.jpg");
+}
+
+.space-top {
+    margin-top: 2em;
+}
+
+.navbar span {
+    color: #bbbbbb;
+}
+
+.card-blockquote>img {
+    width: 100%;
+}
+
+.card {
+    /*margin-bottom: 1em;*/
+    background-image: url("Pic/PowerCard.jpg");
+    background-size: 390px 260px;
+}
+
+.selected {
+	background: #666666;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+  
+body {
+    margin-bottom: 220px;
+    background-image: url("Pic/PowerBackground.jpg");
+    background-size: cover;
+}
+  
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url("Pic/PowerHeaderFooter.jpeg");
+}
+
+.card-image {
+    width: 320px;
+    height: 260px;
+}
+
+
