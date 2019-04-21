@@ -1,6 +1,6 @@
 Project Specification
 
-“Power Lab” is a web application for a food additives web shop. 
+"Power Lab" is a web application for a food additives web shop. 
 The client side is a single page app, dynamically updating with React, using JSX, React JS and Bootstrap.
 The server is built on Express JS and it is using Mongo Db for storing the data. Redux is used as a state management library.
 Redux is a predictable state container for JavaScript apps. 
