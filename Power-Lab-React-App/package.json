@@ -2,6 +2,8 @@
   "name": "power-lab-react-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Boyan Stamatev",
+  "license": "MIT",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "mdbreact": "^4.11.0",

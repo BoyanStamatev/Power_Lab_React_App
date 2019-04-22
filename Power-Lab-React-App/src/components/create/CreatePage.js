@@ -30,7 +30,7 @@ class CreatePage extends Component {
       toastr.error(nextProps.createProductError.message)
     } else if (nextProps.createProductSuccess) {
       this.props.redirect();
-      toastr.success('Power created successfully');
+      toastr.success('food additive created successfully');
       this.props.history.push('/products')
     }
   }
@@ -63,7 +63,7 @@ class CreatePage extends Component {
       <div className='container'>
         <div className='row space-top'>
           <div className='col-md-12'>
-            <h1>Create New power</h1>
+            <h1>Create New Food Additive</h1>
           </div>
         </div>
         <form onSubmit={this.onSubmit}>
@@ -73,7 +73,7 @@ class CreatePage extends Component {
                 type='text'
                 name='name'
                 label='Name'
-                placeholder='Enter power name'
+                placeholder='Enter food additive name'
                 value={this.state.name}
                 onChange={this.onChange}
                 valid={validObj.validName} />
@@ -81,7 +81,7 @@ class CreatePage extends Component {
                 type='text'
                 name='ingredients'
                 label='Ingredients'
-                placeholder='Enter ingredients for the power. Put a comma between them'
+                placeholder='Enter ingredients for the food additive. Put a comma between them'
                 value={this.state.ingredients}
                 onChange={this.onChange}
                 valid={validObj.validIngredients} />
@@ -89,7 +89,7 @@ class CreatePage extends Component {
                 type='text'
                 name='description'
                 label='Description'
-                placeholder='Enter power description'
+                placeholder='Enter food additive description'
                 value={this.state.description}
                 onChange={this.onChange}
                 valid={validObj.validDescription} />
@@ -97,7 +97,7 @@ class CreatePage extends Component {
                 type='text'
                 name='image'
                 label='Image URL'
-                placeholder='Enter power image URL'
+                placeholder='Enter food additive image URL'
                 value={this.state.image}
                 onChange={this.onChange}
                 valid={validObj.validImage} />
@@ -105,7 +105,7 @@ class CreatePage extends Component {
                 type='number'
                 name='weight'
                 label='Weight'
-                placeholder='Enter power weight'
+                placeholder='Enter food additive weight'
                 value={this.state.weight}
                 onChange={this.onChange}
                 valid={validObj.validWeight} />
@@ -113,7 +113,7 @@ class CreatePage extends Component {
                 type='number'
                 name='price'
                 label='Price'
-                placeholder='Enter power price'
+                placeholder='Enter food additive price'
                 value={this.state.price}
                 onChange={this.onChange}
                 valid={validObj.validPrice} />

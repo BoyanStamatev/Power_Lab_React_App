@@ -7,12 +7,12 @@ import {connect} from 'react-redux'
 
 class ReviewsContainer extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       review: ''
-    }
+    };
 
-    this.onChange = this.onChange.bind(this)
+    this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this)
   }
 
@@ -27,21 +27,21 @@ class ReviewsContainer extends Component {
   }
 
   onSubmit (e) {
-    e.preventDefault()
+    e.preventDefault();
     if (!createReviewValidator(this.state.review)) {
-      this.setState({review: ''})
+      this.setState({review: ''});
       return
     }
 
     const data = {
       review: this.state.review
-    }
-    this.props.createReview(this.props.product._id, data)
+    };
+    this.props.createReview(this.props.product._id, data);
     this.setState({review: ''})
   }
 
   render () {
-    const reviews = this.props.product.reviews.map((r, i) => (<Review key={i} review={r} />))
+    const reviews = this.props.product.reviews.map((r, i) => (<Review key={i} review={r} />));
     return (
       <div className='row space-top'>
         <div className='col-md-8'>

@@ -22,8 +22,8 @@ function createProductValidator (name, ingredients, description, image, weight, 
     return false
   }
 
-  if (!weight || weight <= 0 || weight > 15000) {
-    toastr.error('Weight must be between 0 and 15000 grams');
+  if (!weight || !parseInt(weight) || weight < 1 || weight > 15000) {
+    toastr.error('Weight must integer be between 1 and 15000 grams');
     return false
   }
 

@@ -7,7 +7,7 @@
     "power",
     "system"
   ],
-  "author": "PA",
+  "author": "Boyan Stamatev",
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.17.2",
