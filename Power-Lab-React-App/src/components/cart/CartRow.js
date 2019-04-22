@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
+import toastr from "toastr";
 
 class CartRow extends Component {
   constructor (props) {
-    super(props)
+    super(props);
 
-    this.onChange = this.onChange.bind(this)
-    this.onRefreshButtonClick = this.onRefreshButtonClick.bind(this)
+    this.onChange = this.onChange.bind(this);
+    this.onRefreshButtonClick = this.onRefreshButtonClick.bind(this);
     this.onDeleteButtonClick = this.onDeleteButtonClick.bind(this)
   }
 
   onChange (e) {
+      if (e.target.value < 1) {
+          toastr.error('Minimum quantity for order is 1 product!');
+          return false
+      }
     this.props.syncCart(this.props.product._id, parseInt(e.target.value, 10))
   }
 
@@ -22,8 +27,8 @@ class CartRow extends Component {
   }
 
   render () {
-    const {image, name, ingredients, price} = this.props.product
-    const subtotal = this.props.product.quantity * price
+    const {image, name, ingredients, price} = this.props.product;
+    const subtotal = this.props.product.quantity * price;
     return (
       <tr>
         <td data-th='Product'>

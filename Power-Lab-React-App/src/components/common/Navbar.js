@@ -22,8 +22,7 @@ class Navbar extends Component {
                   {loggedIn && <a className='nav-link' href='javascript:void(0)' onClick={logout}>Logout</a>}
                   {!loggedIn && <NavLink className='nav-link' to='/login'>Login</NavLink>}
                   {!loggedIn && <NavLink className='nav-link' to='/register'>Register</NavLink>}
-                  {isAdmin && <span style={{color: 'blue'}}>{products} products in database</span>}
-                  {isAdmin && <span style={{color: 'blue'}}> | {users} users registered</span>}
+                  {isAdmin && <span style={{color: 'yellow'}}>| * Products in database - {products} | * users registered - {users} |</span>}
                 </div>
               </div>
             </div>
